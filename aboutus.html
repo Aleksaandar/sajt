@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Polyglot</title>
+  <link rel="stylesheet" href="css/aboutus.css">
+
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="leftsection">
+      <img class="logo1" src="img/belgium.png" alt="">
+      <img class="logo2" src="img/poliglota.png" alt="">
+    </div>
+
+
+    <div class="rightsection">
+      <section class="top-nav">
+        <div>
+
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+          <li><a href="index.html"><img id="optionalstuff" src="img/home.png" alt="">
+              <div>HOME</div>
+            </a></li>
+          <li><a href="class.html"><img id="optionalstuff" src="img/courses.png" alt="">
+              <div>COURSES</div>
+            </a></li>
+          <li><a href="aboutus.html"><img id="optionalstuff" src="img/aboutus.png" alt="">
+              <div>ABOUT US</div>
+            </a></li>
+          <li><a href="contact.html"><img id="optionalstuff" src="img/contact.png" alt="">
+              <div>CONTACT</div>
+            </a></li>
+
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div class="drugi1">
+    <div class="div-naslov">
+      <h1 class="naslov">Get to know us...</h1>
+    </div>
+
+  </div>
+  <div class="linija">
+    <hr align="center" width="12%">
+  </div>
+
+
+  <div class="ispod">
+    <div class="prvi"><img class="slika1" src="img/prvi.png" alt="">
+      <div class="tekst">
+        <h1 class="div-h1">STUF</h1>
+        <p>Planned, friendly and very knowledgeable staff are always ready to answer all your questions</p>
+      </div>
+    </div>
+    <div class="drugi"><img class="slika2" src="img/DRUGI.png" alt="">
+      <div class="tekst">
+        <h1 class="div-h1">ACITIVITES</h1>
+        <p>In addition to regular classes, there are also various activities, tests and regular checks of what
+          has been learned</p>
+      </div>
+    </div>
+    <div class="drugi"><img class="slika3" src="img/drugi1 (2).png" alt="">
+      <div class="tekst">
+        <h1 class="div-h1">SCHEDULE</h1>
+        <p>Very flexible attendance at dozens of appointments during the week</p>
+      </div>
+    </div>
+    <div class="treci"><img class="slika4" src="img/treci.png" alt="">
+      <div class="tekst">
+        <h1 class="div-h1">RESULTS</h1>
+        <p>Proven guaranteed results, join and learn some of the world's languages </p>
+      </div>
+    </div>
+  </div>
+  <div class="donjiDeo">
+    <div class="forma">
+      <p><i>If you want to share your experience... </i></p>
+      <form id="forma_customers" action="">
+        <div id="polje">
+          <label for="komentar" style="position: absolute;"></label>
+          <textarea name="komentar" id="komentar" cols="100" rows="10"
+            placeholder="Leave your comment here:"></textarea>
+        </div>
+        <div id="send_btn">
+          <button id="komentarbtn" onclick="DodajKomentar()" type="button">Share</button>
+        </div>
+      </form>
+      <ul class="listaKomentara" id="listaKom">
+
+      </ul>
+    </div>
+    <div class="ratings">
+      <h1>Ocenite nas:</h1>
+      <div class="zvezdice">
+        <i class="my-star star-1" data-star="1"></i>
+        <i class="my-star star-2" data-star="2"></i>
+        <i class="my-star star-3" data-star="3"></i>
+        <i class="my-star star-4" data-star="4"></i>
+        <i class="my-star star-5" data-star="5"></i>
+      </div>
+      <div class="vasaOcena">
+        Vasa ocena je:
+      </div>
+      <div class="rezultat">
+        <input type="number" readonly id="output">
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-text">
+      <div class="footer-naslov">RADILI:</div>
+      <table class="tabela" border=0>
+        <ul class="lista">
+          <li>Ivan Jelisavcic</li>
+          <li>Aleksandar Zivanovic</li>
+          <li>Andrija Panovic</li>
+        </ul>
+
+        <div class="footer-last-row">
+          <div class="footer-images">
+            <img id="optionalstuff" class="footer-slika1" src="img/energoprojekt.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/mts.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/plavo.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/uprava.png" alt="">
+          </div>
+          <div class="footer-links">
+            <a target="_blank" href="https://www.instagram.com/fon_bg/?hl=en"><img class="links"
+                src="img/instagram-logo.png" alt=""></a>
+            <a target="_blank" href="https://www.facebook.com/"><img class="links" src="img/facebook.png" alt=""></a>
+            <a target="_blank"
+              href="https://www.google.com/maps/place/Faculty+of+Organizational+Sciences/@44.7726855,20.4730346,17z/data=!3m1!4b1!4m5!3m4!1s0x475a70576248bf79:0xadaf5cff042d3bd0!8m2!3d44.7726817!4d20.4752233"><img
+                class="links" src="img/mape.png" alt=""></a>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+
+  <script src="jscript/aboutus.js"></script>
+</body>
+
+</html>

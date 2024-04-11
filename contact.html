@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polyglot Contact Service</title>
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+  <div class="header">
+
+    <div class="left-section">
+
+
+
+      <img class="site-logo" src="img/belgium.png">
+      <img class="logoNaziv" src="img/poliglota.png" alt="">
+
+
+
+    </div>
+
+
+
+    <div class="right-section">
+      <a target="_blank" href="https://www.instagram.com/fon_bg/?hl=en">
+        <div class="ig">
+          <img class="social-media" src="img/instagram-logo.png">
+      </a>
+    </div></a>
+    <a target="_blank" href="https://www.facebook.com/">
+      <div class=" fb">
+        <img class="social-media" src="img/facebook.png">
+
+      </div>
+    </a>
+
+    <a href="index.html">
+      <div class="mini-div">
+        <img class="mini-pic" src="img/home.png">
+
+        <p>Home</p>
+
+      </div>
+    </a>
+
+    <a href="aboutus.html">
+      <div class="mini-div">
+        <img class="mini-pic" src="img/aboutus.png" alt="">
+        <p>About us</p>
+
+      </div>
+    </a>
+
+    <a href="class.html">
+      <div class="mini-div">
+        <img class="mini-pic" src="img/courses.png">
+        <p>Courses</p>
+
+      </div>
+    </a>
+
+    <a href="contact.html">
+      <div class="mini-div">
+        <img class="mini-pic" src="img/contact.png" alt="">
+        <p>Contact</p>
+
+      </div>
+    </a>
+
+
+
+  </div>
+  </div>
+  <div class="banner">
+    <div class="overlay"></div>
+  </div>
+  <div class="content">
+    <h1>Get in touch</h1>
+    <h2>Want to get in touch? We'd love to hear from you.Here's how you can reach us...</h2>
+  </div>
+  <div class="pomoc">
+    <div class="div1">
+      <img class="telefon" src="img/telefon .png" alt="" width="100" height="100">
+      <div class="centred">
+        <h1>Talk to Us </h1>
+
+      </div>
+      <h2>Interested in Polyglot's language courses? Just pick up the phone to chat with a member of our crew.
+      </h2>
+      <h3>+ 1 123 456 6789 </h3>
+    </div>
+    <div class="div2">
+      <div class="centred">
+        <h1>Contact Customer Support</h1>
+      </div>
+      <img class="poruke" src="img/poruke.png  " alt="" width="100" height="100">
+      <h2>Sometimes you need a little help from your friends. Or a Polyglot support rep.Don't worry... we're here for
+        you.
+      </h2>
+      <button type="button"><span></span>Contact support</button>
+    </div>
+
+  </div>
+  <div class="zakazi">
+    <div class="forma">
+      <h1>Schedule meeting</h1>
+      <form name="myForm" id="myForm" onsubmit="Validiraj()">
+        <div class="polja">
+          <div class="red">
+            <div class="col">
+              <label for="ime">First Name</label>
+            </div>
+            <div class="col2">
+              <input type="text" id="ime" name="ime" placeholder="your first name is..." maxlength="20">
+            </div>
+          </div>
+          <div class="red">
+            <div class="col">
+              <label for="Prezime">Last Name</label>
+            </div>
+            <div class="col2">
+              <input type="text" id="prezime" name="Prezime" placeholder="Your last name is..." maxlength="20">
+            </div>
+          </div>
+          <div class="red">
+            <div class="col">
+              <label for="adresa">Adress</label>
+            </div>
+            <div class="col2">
+              <input type="text" id="adresa" name="adresa" placeholder="Your adress is..." maxlength="30">
+            </div>
+          </div>
+          <div class="red">
+            <div class="col">
+              <label for="brojTelefona">Telephone number</label>
+            </div>
+            <div class="col2">
+              <input type="text" id="brojTelefona" name="brojTelefona" placeholder="06...">
+            </div>
+          </div>
+          <div class="red">
+            <div class="col">
+              <label for="grad">City</label>
+            </div>
+            <div class="col2">
+              <select id="city" name="grad">
+                <option value="izaberi">Choose city:</option>
+                <option value="Beograd">Beograd</option>
+                <option value="Novi Sad">Novi Sad</option>
+                <option value="Nis">Nis</option>
+              </select>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="radio">
+          <div class="row">
+            <h3>Want to speak to?</h3>
+          </div>
+          <div class="red" id="teacherLabel">
+            <div class="col">
+              <label for="teacher">Teacher</label>
+            </div>
+            <div class="col2">
+              <input type="radio" id="teacher" value="teacher" name="staff">
+            </div>
+          </div>
+          <div class="red" id="directorLabel">
+            <div class="col">
+              <label for="director">Director</label>
+            </div>
+            <div class="col2">
+              <input type="radio" id="director" value="director" name="staff">
+            </div>
+          </div>
+          <div class="red" id="accountantLabel">
+            <div class="col">
+              <label for="accountant">Accountant</label>
+            </div>
+            <div class="col2">
+              <input type="radio" id="accountant" value="accountant" name="staff">
+            </div>
+          </div>
+          <div class="dugmad">
+            <input type="button" id="obrisiDugme" value="Delete" onclick="Obrisi()">
+            <input type="submit" id="zakaziDugme" value="Schedule">
+          </div>
+
+        </div>
+
+    </div>
+
+    <div class="mapa">
+      <h2>Locations</h2>
+      <div class="radi">
+        <form class="formica">
+          <label class="radio-inline">
+            <input type="radio" onclick="Mapa()" name="optradio" checked value="beograd">Belgrade
+          </label>
+          <label class="radio-inline">
+            <input type="radio" onclick="Mapa()" name="optradio" value="novi-sad">Novi Sad
+          </label>
+
+          <label class="radio-inline">
+            <input type="radio" onclick="Mapa()" name="optradio" value="nis">Nis
+          </label>
+        </form>
+      </div>
+      <div class="divMapa beograd"><iframe class="mapica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2832.398444943337!2d20.47303461553444!3d44.772681679098895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a70576248bf79%3A0xadaf5cff042d3bd0!2sFaculty%20of%20Organizational%20Sciences!5e0!3m2!1sen!2srs!4v1671033600360!5m2!1sen!2srs"
+          width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="divMapa novi-sad" style="display: none;"><iframe class="mapica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37789.66027327556!2d19.799235853290316!3d45.25318551363804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1050ee86690f%3A0xe33d5134c18e708b!2sSkola%20stranih%20jezika%20ELTISI%20Novi%20Sad%20-%20www.eltisi.com!5e0!3m2!1sen!2srs!4v1671137828621!5m2!1sen!2srs"
+          width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="divMapa nis" style="display: none;">
+        <iframe class="mapica"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.7343834132957!2d21.892891415486947!3d43.319819479134125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4755b0b6e81743f5%3A0x814a38d46496856d!2sAkademija%20Oxford%20Ni%C5%A1!5e0!3m2!1sen!2srs!4v1671138492504!5m2!1sen!2srs"
+          width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer">
+    <div class="footer-text">
+      <div class="footer-naslov">RADILI:</div>
+      <table class="tabela" border=0>
+        <ul class="lista">
+          <li>Ivan Jelisavcic</li>
+          <li>Aleksandar Zivanovic</li>
+          <li>Andrija Panovic</li>
+        </ul>
+
+        <div class="footer-last-row">
+          <div class="footer-images">
+            <img id="optionalstuff" class="footer-slika1" src="img/energoprojekt.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/banka.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/mts.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/plavo.png" alt="">
+            <img id="optionalstuff" class="footer-slika1" src="img/uprava.png" alt="">
+          </div>
+          <div class="footer-links">
+            <a target="_blank" href="https://www.instagram.com/fon_bg/?hl=en"><img class="links"
+                src="img/instagram-logo.png" alt=""></a>
+            <a target="_blank" href="https://www.facebook.com/" a target="_blank" href="https://www.facebook.com/"><img
+                class="links" src="img/facebook.png" alt=""></a>
+            <a target="_blank"
+              href="https://www.google.com/maps/place/Faculty+of+Organizational+Sciences/@44.7726855,20.4730346,17z/data=!3m1!4b1!4m5!3m4!1s0x475a70576248bf79:0xadaf5cff042d3bd0!8m2!3d44.7726817!4d20.4752233"><img
+                class="links" src="img/mape.png" alt=""></a>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="jscript/zakazi.js"></script>
+</body>
+
+</html>

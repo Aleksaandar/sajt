@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule class - Polyglot</title>
+    <script src="jscript/jquery-3.6.3.js"></script>
+    <link rel="stylesheet" href="css/class.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="left-section">
+            <img class="site-logo" src="img/belgium.png">
+            <img class="site-logo2" src="img/poliglota.png">
+        </div>
+
+        <div class="right-section">
+
+            <div class="ig">
+                <a target="_blank" href="https://www.instagram.com/fon_bg/?hl=en">
+                    <img class="social-media" src="img/instagram-logo.png">
+                </a>
+            </div>
+
+
+            <div class=" fb">
+                <a target="_blank" href="https://www.facebook.com/">
+                    <img class="social-media" src="img/facebook.png">
+                </a>
+            </div>
+
+
+            <a href="index.html">
+                <div class="mini-div">
+                    <img class="mini-pic" src="img/home.png">
+
+                    <p>Home</p>
+
+                </div>
+            </a>
+
+            <a href="aboutus.html">
+                <div class="mini-div">
+                    <img class="mini-pic" src="img/aboutus.png" alt="">
+                    <p>About us</p>
+
+                </div>
+            </a>
+
+            <a href="class.html">
+                <div class="mini-div">
+                    <img class="mini-pic" src="img/courses.png">
+                    <p>Courses</p>
+
+                </div>
+            </a>
+
+            <a href="contact.html">
+                <div class="mini-div">
+                    <img class="mini-pic" src="img/contact.png" alt="">
+                    <p>Contact</p>
+
+                </div>
+            </a>
+        </div>
+
+
+    </header>
+    <div class="tekst">
+        <h3 class="naslov">Meet some of our  language teachers</h3>
+        <p>Our teachers come from all over the world, bringing a range of cultures,
+            accents and experiences for you to learn from.</p>
+    </div>
+
+    <div class="popup" id="popup-1">
+
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="gasi()">&times;</div>
+            <h2>Book your lesson</h2>
+
+            <form class="forma" id="forma">
+                <div class="form-element ">
+                    <label for="Name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter name">
+                    <small>Error message</small>
+                </div>
+                <div class="form-element ">
+                    <label for="Name">Surname:</label>
+                    <input type="text" id="surname" placeholder="Enter surname">
+                    <small>Error message</small>
+                </div>
+                <div class="form-element">
+                    <label for="Name">Tel number:</label>
+                    <input type="text" id="tel" placeholder="Enter telephone number">
+                    <small>Error message</small>
+                </div>
+
+                <div class="form-element-confirm">
+                    <button id="confirm" onclick="Validiraj()">Confirm</button>
+                </div>
+
+
+            </form>
+
+
+
+        </div>
+
+    </div>
+   
+
+    <div class="container">
+        <div class="dugmad">
+            <div class="jezici">
+                <h1>Languages</h1>
+                <select name="jezici" id="jeziciSelect" onchange="filtriraj()">
+                    <option value="all">All</option>
+                    <option value="english">English</option>
+                    <option value="italian">Italian</option>
+                    <option value="french">French</option>
+                    <option value="serbian">Serbian</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="portugues">Portugues</option>
+                    <option value="german">German</option>
+                    <option value="persian">Persian</option>
+                </select>
+            </div>
+            <div class="bla">
+                <h1>Price</h1>
+                <select name="cena" id="cenaSelect" onchange="filtriraj()">
+                    <option value="all">All</option>
+                    <option data-cenaod="15" data-cenado="25">15-25$</option>
+                    <option data-cenaod="25" data-cenado="35">25-35$</option>
+                    <option data-cenaod="35" data-cenado="40">35-40$</option>
+
+                </select>
+            </div>
+        </div>
+
+        <div class="panel-profesora">
+            <!--Prvi PROFESOR-->
+            <div class="profesor italian" data-cena="22">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar3.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Emma</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Rome, Italy</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">Italian</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,Italian</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.7</p>
+                            <p class="opis">15 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">22</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+
+
+
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Drugi PROFESOR-->
+            <div class="profesor english french" data-cena="38">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-ofline"></div>
+                        <div class="status-ofline-banner">Last seen 3h ago</div>
+                        <img class="profilna" src="img/avatar1.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Elyna</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Paris, France</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English,French</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,French,Italian</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 3.9</p>
+                            <p class="opis">12 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">38</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Treci PROFESOR-->
+            <div class="profesor english" data-cena="22">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar2.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Emily</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Chicago, USA</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,French</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.9</p>
+                            <p class="opis">10 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">22</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Cetvrti PROFESOR-->
+            <div class="profesor english persian" data-cena="20">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar4.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Anila </h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Tabriz, Iran</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English, Persian</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">Persian, English</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 5.0</p>
+                            <p class="opis">28 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">20</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Peti PROFESOR-->
+            <div class="profesor english serbian " data-cena="18">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-ofline"></div>
+                        <div class="status-ofline-banner">Last seen 45min ago</div>
+                        <img class="profilna" src="img/avatar5.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Marko</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Belgrade, Serbia</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English,Serbian</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,Serbian</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 5.0</p>
+                            <p class="opis">18 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">18</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sesti PROFESOR-->
+            <div class="profesor spanish" data-cena="18">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar6.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Pedro</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Madrid, Spain</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">Spanish</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">Spanish,French</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.0</p>
+                            <p class="opis">8 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">18</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+            <!--Sedmi PROFESOR-->
+            <div class="profesor french english" data-cena="27">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar7.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Anna</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">London, England</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English,French</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,French</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.9</p>
+                            <p class="opis">17 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">27</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+
+
+
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Osmi PROFESOR-->
+            <div class="profesor italian" data-cena="25">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-ofline"></div>
+                        <div class="status-ofline-banner">Last seen 3h ago</div>
+                        <img class="profilna" src="img/avatar8.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Adinn</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Boston,USA</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">Italian</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,Italian</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.7</p>
+                            <p class="opis">18 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">25</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Deveti PROFESOR-->
+            <div class="profesor english spanish" data-cena="13">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar9.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">John</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">New York, USA</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English,Spanish</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,Spanish</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 3.9</p>
+                            <p class="opis">13 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">23</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Deseti PROFESOR-->
+            <div class="profesor german" data-cena="19">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar10.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Hains </h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Berlin, Germany</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">German</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">German</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 4.3</p>
+                            <p class="opis">28 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">19</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Jedanaesti PROFESOR-->
+            <div class="profesor portugues english" data-cena="35">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-ofline"></div>
+                        <div class="status-ofline-banner">Last seen 45min ago</div>
+                        <img class="profilna" src="img/avatar11.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Luca</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Lisabon, Portugal</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">English,Portuguese</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">English,Portuguese</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 3.2</p>
+                            <p class="opis">17 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">35</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Dvanaesti PROFESOR-->
+            <div class="profesor spanish" data-cena="20">
+                <div class="left-section-profesor">
+                    <div class="div-profilna">
+                        <div class="status-online"></div>
+                        <div class="status-online-banner">Online now</div>
+                        <img class="profilna" src="img/avatar12.png">
+                    </div>
+
+                </div>
+                <div class="middle-section-profesor">
+                    <h2 class="ime">Carlos</h2>
+                    <p class="tip1">Where I am from: <span class="tip2">Mexico City,Mexico</span></p>
+
+                    <p class="tip1">Languages I teach: <span class="tip3">Spanish</span></p>
+
+                    <p class="tip1">Languages I speak: <span class="tip2">Spanish</span></p>
+
+                </div>
+                <div class="right-section-profesor">
+                    <div class="ocena-div">
+                        <div class="zvezdica">
+                            <p>&#11088 5.0</p>
+                            <p class="opis">19 reviews</p>
+                        </div>
+                        <div class="cena">
+                            <p>$ <span class="iznos">20</span></p>
+                            <p class="opis">50-min lesson</p>
+                        </div>
+                    </div>
+                    <div class="zakazi-cas-div">
+                        <button class="cas" onclick="prikazi()">Book trial lesson</button>
+                    </div>
+                    <div class="poruka-div">
+                        <button class="message" onclick="poruka()">Message</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+          <div class="footer-naslovv">RADILI:</div>
+          <table class="tabela" border=0>
+            <ul class="lista">
+              <li>Ivan Jelisavcic</li>
+              <li>Aleksandar Zivanovic</li>
+              <li>Andrija Panovic</li>
+            </ul>
+    
+            <div class="footer-last-row">
+              <div class="footer-images">
+                <img id="optionalstuff" class="footer-slika1" src="img/energoprojekt.png" alt="">
+                <img id="optionalstuff" class="footer-slika1" src="img/mts.png" alt="">
+                <img id="optionalstuff" class="footer-slika1" src="img/plavo.png" alt="">
+                <img id="optionalstuff" class="footer-slika1" src="img/uprava.png" alt="">
+              </div>
+              <div class="footer-links">
+                <a target="_blank" href="https://www.instagram.com/fon_bg/?hl=en"><img class="links"
+                    src="img/instagram-logo.png" alt=""></a>
+                <a target="_blank" href="https://www.facebook.com/"><img class="links" src="img/facebook.png" alt=""></a>
+                <a target="_blank"
+                  href="https://www.google.com/maps/place/Faculty+of+Organizational+Sciences/@44.7726855,20.4730346,17z/data=!3m1!4b1!4m5!3m4!1s0x475a70576248bf79:0xadaf5cff042d3bd0!8m2!3d44.7726817!4d20.4752233"><img
+                    class="links" src="img/mape.png" alt=""></a>
+    
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+
+    <script src="jscript/class.js"></script>
+</body>
+
+</html>
